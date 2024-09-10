@@ -1,0 +1,115 @@
+.timeline--container {
+    background: #fff;
+}
+
+.timeline--wrapper {
+    padding-top: 40px;
+    padding-bottom: 40px;
+}
+
+.timeline--job {
+    position: relative;
+    margin-left: 10px;
+    margin-bottom: 20px;
+    
+    &:before {
+        content: "";
+        height: 32px;
+        width: 32px;
+        border: 4px outset #333;
+        border-radius: 100px;
+        box-shadow: 4px 4px 4px rgba(0, 0, 0, 0.5);
+        background: var(--bg-main);
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        position: absolute;
+        left: 0;
+        top: 50%;
+        transform: translate(-50%, -50%);
+        z-index: 2;
+    }
+
+    &:after {
+        content: "";
+        height: calc(100% + 20px);
+        width: 4px;
+        background: #333;
+        position: absolute;
+        left: 0;
+        top: 50%;
+        transform: translate(-50%, -50%);
+        z-index: 1;
+    }
+}
+
+.timeline--date {
+    font-size: 0.6rem;
+    color: var(--text-white);
+    position: absolute;    
+    left: 0;
+    top: 50%;
+    transform: translate(-50%, -50%);
+    z-index: 3;
+}
+
+.timeline--content {
+    margin-left: 28px;
+    padding: 20px;
+    border: 2px outset #333;
+    border-radius: 4px;
+    box-shadow: 4px 4px 4px rgba(0, 0, 0, 0.5);
+
+    h3 {
+        font-size: 1.2rem;
+        font-weight: bold;
+        font-family: var(--family-title);
+        color: var(--text-dark);
+        margin-bottom: 8px;
+    }
+
+    p {
+        font-size: 1rem;
+        color: var(--text-dark);
+    }
+}
+
+@media (min-width: 769px) {
+    .timeline--wrapper {
+        padding-top: 60px;
+        padding-bottom: 60px;
+    }
+
+    .timeline--job {
+        width: 50%;
+    }
+
+    .timeline--job:nth-child(odd) {
+        position: relative;
+        left: 50%;
+
+       
+    }
+
+    .timeline--job:nth-child(even) {
+        &:before, &:after {
+            left: 100%;
+        }
+
+        .timeline--date {
+            left: 100%;
+        }
+
+        .timeline--content {
+            margin-left: 0px;
+            margin-right: 28px;
+        }
+    }
+}
+
+@media (min-width: 976px) {
+    .timeline--wrapper {
+        padding-top: 80px;
+        padding-bottom: 80px;
+    }
+}

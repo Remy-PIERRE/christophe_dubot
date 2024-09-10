@@ -1,0 +1,110 @@
+.presentation--container {    
+}
+
+.presentation--wrapper {
+    padding-top: 40px;
+    padding-bottom: 40px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.presentation--image {
+    width: 200px;
+    aspect-ratio: 1 / 1;
+    position: relative;
+    border-radius: 100px;
+    overflow: hidden;
+    
+    img {
+        width: 100%;
+        height: auto;
+        object-fit: cover;
+    }
+
+    &:after {
+        content: "";
+        height: 50px;
+        width: 100%;
+        background: rgba(255, 255, 255, 0.5);
+        position: absolute;
+        left: 50%;
+        bottom: -10px;
+        transform: translate(-50%, 0);
+    }
+}
+
+.presentation--title {
+    width: fit-content;
+    display: flex;
+    align-items: center;
+    gap: 20px;
+    margin: 0 auto 40px;
+
+    img {
+        height: var(--imagesize-title);
+        width: auto;
+    }
+
+    h2 {
+        padding: 2px 12px;
+        font-family: var(--family-title);
+        font-size: var(--fontsize-title);
+        font-weight: bold;
+        color: var(--text-dark);
+        position: relative;
+
+        &::before, &::after {
+            content: "";
+            width: 100%;
+            height: 3px;
+            background: var(--text-dark);
+            border-radius: 8px;
+            position: absolute;
+            left: 0;
+        }
+
+        &::before {
+            top: 0;
+        }
+
+        &::after {
+            bottom: 0;
+        }
+    }           
+}
+
+.presentation--content {
+    position: relative;
+    top: -40px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+
+    p {
+        font-size: var(--text-content-size);
+        color: var(--text-content-color);
+        margin-bottom: 12px;
+        line-height: 1.4;
+    }
+}
+
+.presentation--cta {
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 40px;
+
+    button {
+        height: 40px;
+        width: 200px;
+        border: 2px solid var(--bg-main);
+        border-radius: 12px;
+        font-size: 1rem;
+        font-weight: bold;
+        color: var(--text-dark);
+        background: #fff;
+        cursor: pointer;
+    }
+}

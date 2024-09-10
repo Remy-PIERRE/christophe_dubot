@@ -1,0 +1,190 @@
+.header--container {
+    background: var(--bg-white);
+    transition: background 0.4s;
+    position: relative;
+    z-index: 5;
+
+    &.sticky {
+        position: sticky;
+        top: 0;
+        left: 0;
+        background: var(--bg-main);
+
+        .header--wrapper {
+            padding-top: 8px;
+            padding-bottom: 8px;
+        }
+    }
+}
+
+.header--wrapper {
+    padding-top: 20px;
+    padding-bottom: 20px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;  
+    transition: padding 0.4s;  
+}
+
+// cf - test //
+.header--logo {
+}
+
+.header--nav {
+    height: 100vh;
+    width: 80%;
+    background: var(--bg-white);
+    box-shadow: 4px 4px 4px rgba(0, 0, 0, 0.5);
+    padding: 40px 20px;
+    position: fixed;
+    top: 0;
+    left: -100%;
+    z-index: 10;
+    display: flex;
+    flex-direction: column;
+    transition: left 0.4s;
+
+    &.opened {
+        left: 0;
+    }
+
+    a {
+        font-size: 1.2rem;
+        font-weight: bold;
+        padding: 20px 12px;
+        color: var(--text-dark);
+        display: flex;
+        align-items: center;
+        border-bottom: 4px solid var(--text-dark);
+        transition: color 0.4s;
+        
+        &:last-child {
+            border: none;
+        }
+    }
+}
+
+.mobile--header--menu--icon {
+    width: 40px;
+    padding: 4px;
+    cursor: pointer;
+}
+
+@media ( max-width: 320px) {
+    .mobile--header--menu--icon {
+        width: 32px;
+    }
+}
+
+@media (min-width: 769px) {
+    .header--container.sticky {
+        .header--wrapper {
+            flex-wrap: nowrap;
+            justify-content: space-between;
+        }
+
+        .header--nav {
+            flex-grow: 1;
+            max-width: 800px;
+    
+            a {
+                padding: 2px 4px;
+                font-size: 0.8rem;
+                color: var(--text-white);
+                border-right: 1px solid var(--text-white);
+
+                &:last-child {
+                    border: none;
+                }  
+                
+                &:after {
+                    content: "";
+                    width: calc(100% - 16px);
+                    max-width: 0;
+                    height: 2px;
+                    background: var(--text-white);
+                    position: absolute;
+                    bottom: -4px;
+                    left: 50%;
+                    transform: translate(-50%);
+                    transition: all 0.4s;
+                }
+    
+                &:hover::after {
+                    max-width: 100%;
+                }
+            }
+        }
+    }
+
+    .header--wrapper {
+        padding-top: 20px;
+        padding-bottom: 20px;
+        flex-wrap: wrap;
+        gap: 40px;
+    }
+
+    .mobile--header--menu--icon {
+        display: none;
+    }
+
+    .header--nav {
+        height: fit-content;
+        width: 100%;
+        background: transparent;
+        box-shadow: none;
+        padding: 0;
+        position: static;
+        flex-direction: row;
+        justify-content: space-around;
+        transition: left 0.4s;
+
+        a {
+            flex-grow: 1;
+            font-size: 1rem;
+            padding: 4px 0;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            border-bottom: none;
+            border-right: 2px solid var(--text-dark);
+            position: relative;
+            
+            &:last-child {
+                border: none;
+            }
+
+            &:after {
+                content: "";
+                width: clamp(100px, 70%, 200px);
+                max-width: 0;
+                height: 2px;
+                background: var(--text-dark);
+                position: absolute;
+                bottom: -4px;
+                left: 50%;
+                transform: translate(-50%);
+                transition: all 0.4s;
+            }
+
+            &:hover::after {
+                max-width: 100%;
+            }
+        }
+    }
+}
+
+@media (min-width: 976px) {
+    .header--container.sticky {    
+        a {
+            padding: 2px 4px;
+            font-size: 1rem;
+            border-right: 1px solid var(--text-white);
+
+            &:last-child {
+                border: none;
+            }
+        }
+    }
+    
+}

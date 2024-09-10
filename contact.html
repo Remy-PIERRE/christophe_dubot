@@ -1,0 +1,153 @@
+<!DOCTYPE html>
+<html lang="fr">
+	<head>
+		<meta charset="UTF-8" />
+		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+		<title>Christophe Dubot - La chambre à tachyons</title>
+
+		<link rel="stylesheet" href="./style/contact.css" />
+	</head>
+	<body>
+		<div class="hidden" id="page" data-page="contact"></div>
+		<div class="body--screen" id="bodyScreen"></div>
+
+		<section class="banner--container container">
+			<div class="banner--wrapper wrapper">
+				<div class="banner--socials">
+					<!-- TODO - choix réseaux + url -->
+					<a href="#">
+						<img
+							src="./public/images/facebook_white.png"
+							alt="icone pour accéder à la page Facebook" />
+					</a>
+					<a href="#">
+						<img
+							src="./public/images/instagram_white.png"
+							alt="icone pour accéder à la page Instagram" />
+					</a>
+				</div>
+
+				<div class="banner--info">
+					<!-- TODO - détail de l'email => href + texte -->
+					<a href="#">
+						<img
+							src="./public/images/email_white.png"
+							alt="icone pour envoyer un e-mail" />
+						<p>docchatminou@exemple.com</p>
+					</a>
+				</div>
+			</div>
+		</section>
+
+		<main class="main--container">
+			<header class="header--container container shadow--big" id="header">
+				<div class="header--wrapper wrapper">
+					<!-- TODO - séléction logo + image / nom -->
+					<!-- css test -->
+					<div class="header--logo test--header--logo--image">
+						<img
+							src="./public/images/chat.png"
+							alt="logo de Christophe Dubot"
+							class="box--round--normal" />
+					</div>
+
+					<div class="header--logo test--header--logo--name">
+						<h1>Christophe Dubot</h1>
+					</div>
+
+					<img
+						src="./public/images/menu.png"
+						alt="icone pour ouvrir le menu"
+						class="mobile--header--menu--icon"
+						id="mobileMenuIcon" />
+
+					<nav class="header--nav">
+						<a href="./index.html">ACCUEIL</a>
+						<a href="./services.html">SERVICES</a>
+						<a href="./chambre-a-tachyons.html">CHAMBRE &Agrave; TACHYONS</a>
+						<a href="./mon-histoire.html">MON HISTOIRE</a>
+						<a href="#">CONTACT</a>
+					</nav>
+				</div>
+			</header>
+
+			<!-- <section class="contact--container container">
+				<div class="contact--wrapper wrapper"></div>
+			</section> -->
+
+			<section class="contact--container container">
+				<div class="contact--wrapper wrapper">
+					<h3>Vous pouvez nous contacter par mail :</h3>
+					<a href="#" class="contact--info">
+						<img
+							src="./public/images/mail.png"
+							alt="icone pour envoyer un e-mail" />
+						<p>docchatminou@exemple.com</p>
+					</a>
+
+					<h3>Ou via le formulaire suivant :</h3>
+
+					<img
+						src="./public/images/lake-4442337_1280.jpg"
+						alt="deco"
+						class="contact--image" />
+
+					<form action="#" class="contact--form" id="contactForm">
+						<div class="form--input">
+							<label for="firstName">Prénom</label>
+							<input type="text" id="firstName" />
+						</div>
+						<div class="form--input">
+							<label for="lastName">Nom</label>
+							<input type="text" id="lastName" />
+						</div>
+						<div class="form--input">
+							<label for="object">Objet du message</label>
+							<input type="text" id="object" />
+						</div>
+						<div class="form--input">
+							<label for="message">Message</label>
+							<textarea id="message"></textarea>
+						</div>
+
+						<div class="form--submit">
+							<button>Valider</button>
+						</div>
+					</form>
+				</div>
+			</section>
+		</main>
+
+		<footer class="footer--container container">
+			<div class="footer--wrapper wrapper">
+				<div class="footer--socials">
+					<a href="#">
+						<img
+							src="./public/images/facebook_white.png"
+							alt="icone pour accéder à la page Facebook" />
+					</a>
+					<a href="#">
+						<img
+							src="./public/images/instagram_white.png"
+							alt="icone pour accéder à la page Instagram" />
+					</a>
+				</div>
+
+				<nav class="footer--nav">
+					<a href="./index.html">ACCUEIL</a>
+					<a href="./services.html">SERVICES</a>
+					<a href="./chambre-a-tachyons.html">CHAMBRE &Agrave; TACHYONS</a>
+					<a href="./mon-histoire.html">MON HISTOIRE</a>
+					<a href="#">CONTACT</a>
+				</nav>
+
+				<div class="footer--info">
+					<a href="#">Mentions légales</a>
+					<p id="copyrights"></p>
+				</div>
+			</div>
+		</footer>
+	</body>
+
+	<script type="module" src="./script/main.js"></script>
+</html>

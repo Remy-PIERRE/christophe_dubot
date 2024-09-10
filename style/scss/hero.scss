@@ -1,0 +1,106 @@
+.hero--container {
+    background-image: url("../public/images/bg_3.jpg");
+    background-size: 100% auto;
+    background-position:  50%;
+    height: 200px;
+}
+
+.hero--wrapper {
+    width: 100%;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    margin-top: 4px;
+    padding-top: 40px;
+   
+
+    h1 {
+        width: fit-content;
+        font-size: 1.4rem;
+        font-weight: bold;
+        font-family: var(--family-title);
+        color: var(--text-dark);
+        padding: 4px 8px;
+        position: relative;
+
+        &::before, &::after {
+            content: "";
+            width: 100%;
+            height: 3px;
+            background: var(--text-dark);
+            border-radius: 8px;
+            position: absolute;
+            left: 0;
+        }
+
+        &::before {
+            top: 0;
+        }
+
+        &::after {
+            bottom: 0;
+        }
+    }
+}
+
+.hero--container.chambre {
+    background-image: url("../public/images/waves-circles-109964_1280.jpg");
+
+    h1 {
+        color: var(--text-white);
+
+        &:after, &:before {
+            background: var(--bg-white);
+        }
+    }
+}
+
+.hero--container.apropos {
+    background-image: url("../public/images/travel-3094289_1280.jpg");
+
+    h1 {
+        color: var(--text-white);
+
+        &:after, &:before {
+            background: var(--bg-white);
+        }
+    }
+}
+
+@media (min-width: 769px) {
+    .hero--container {
+        height: 300px;
+    }
+
+    .hero--wrapper {
+        padding-top: 40px;
+    
+        h1 {
+            font-size: 2rem;
+            padding: 8px 12px;
+    
+            &::before, &::after {
+                height: 4px;
+            }
+        }
+    }
+}
+
+@media (min-width: 976px) {
+    .hero--container {
+        height: 400px;
+    }
+
+    .hero--wrapper {
+        padding-top: 60px;
+    
+        h1 {
+            font-size: 2.4rem;
+            padding: 8px 12px;
+    
+            &::before, &::after {
+                height: 4px;
+            }
+        }
+    }
+}
